@@ -1,32 +1,51 @@
-#include <stdio.h>                  
+#include <stdio.h>
 #include <stdlib.h>
 
-float calcularArea(int base, int altura) {
+float calcularArea(int base, int altura)
+{
 
     return (float)(base * altura) / 2; // casting
 }
 
-int main() {
+int checarBase(int base)
+{
 
-    int base;
-    int altura;
-
-    do {
+    do
+    {
         printf("\nDigite o valor da base:");
         scanf("%d", &base);
-
-        printf("\nDigite o valor da altura:");
-        scanf("%d", &altura);
-
-    } while ((base <= 0) || (altura <= 0)); 
+    } while (base <= 0);
     {
-           float area = calcularArea(base, altura);
-
-           printf("\nÁrea do triângulo: %.2f", area);
-           printf("\n\n\n");
-
-           return 0; 
+        return base;
     }
-    
 }
 
+int checarAltura(int altura)
+{
+
+    do
+    {
+        printf("\nDigite o valor da altura:");
+        scanf("%d", &altura);
+    } while (altura <= 0);
+    {
+        return altura;
+    }
+}
+
+int main()
+{
+
+    int base;
+    base = checarBase(base);
+
+    int altura;
+    altura = checarAltura(altura);
+
+    float area = calcularArea(base, altura);
+
+    printf("\nÁrea do triângulo: %.2f", area);
+    printf("\n\n\n");
+
+    return 0;
+}

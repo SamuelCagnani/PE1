@@ -1,31 +1,43 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-float calcularPerimetro(float lado) {
+float calcularPerimetro(float lado)
+{
     return lado * 4;
 }
 
-float calcularArea(float lado) {
-    return lado*lado;
+float calcularArea(float lado)
+{
+    return lado * lado;
 }
 
+float checarLado(float lado)
+{
+    do
+    {
+        printf("\nDigite o valor do lado:");
+        scanf("%f", &lado);
+    } while (lado <= 0);
+    {
+        return lado;
+    }
+}
 
-int main() {
+int main()
+{
 
     float lado;
+    lado = checarLado(lado);
 
-    printf("\nDigite o valor do lado:");
-    scanf("%f",&lado);
+    float perimetro;
+    perimetro = calcularPerimetro(lado);
 
-    float perimetro = calcularPerimetro(lado);
-    float area = calcularArea(lado);
+    float area;
+    area = calcularArea(lado);
 
-    printf("\nPerimetro do quadrado: %.2f \n", perimetro);
+    printf("\nPerimetro do quadrado: %.2f", perimetro);
     printf("\nÁrea do quadrado: %.2f", area);
-
-
-    printf("\n\n\n\n\n");
+    printf("\n\n\n");
 
     return 0;
-
 }
