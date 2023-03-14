@@ -40,7 +40,11 @@ int checarAltura(int altura)
     do
     {
         printf("\nDigite o valor da altura:");
-        scanf("%d", &altura);
+        scanf("%d", &alturafloat receberValor1(float n1) {
+    
+    printf("Digite o priemiro número:");
+    scanf("%f", &n1);
+});
     } while (altura <= 0);
     {
         return altura;
